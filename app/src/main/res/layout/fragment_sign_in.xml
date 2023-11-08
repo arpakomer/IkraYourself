@@ -1,0 +1,127 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="isSignFragmentNesnesi"
+            type="com.arpak.ikrayourself.ui.login.signin.SignInFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F6F7"
+        tools:context=".ui.login.signin.SignInFragment">
+
+        <ImageView
+            android:id="@+id/imageViewSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_biggest"
+            android:contentDescription="@string/ikra_yourself"
+            app:layout_constraintBottom_toTopOf="@+id/textViewSignIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_image" />
+
+        <TextView
+            android:id="@+id/textViewSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/text_size_big"
+            app:layout_constraintBottom_toTopOf="@+id/emailTextInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewSignIn" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_biggest"
+            android:layout_marginEnd="@dimen/margin_biggest"
+            android:hint="@string/email_hint"
+            android:textColorHint="#008080"
+            app:boxStrokeColor="@color/DarkGreen"
+            app:boxStrokeWidth="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/passwordTextInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSignIn"
+            app:startIconDrawable="@drawable/ic_e_mail"
+            app:startIconTint="@color/Lime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:textColor="@color/Lime"
+                android:textColorHint="@color/Lime"/>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_biggest"
+            android:layout_marginEnd="@dimen/margin_biggest"
+            android:hint="@string/password_hint"
+            android:textColorHint="#008080"
+            app:boxStrokeWidth="@dimen/box_strike_width"
+            app:layout_constraintBottom_toTopOf="@+id/signInButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextInput"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/GreenYellow"
+            app:startIconDrawable="@drawable/ic_password"
+            app:startIconTint="@color/Lime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/Lime"
+                android:textColorHint="@color/Lime">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="@dimen/margin_incredible"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_very_big"
+            android:backgroundTint="@color/black"
+            android:onClick="@{ () -> isSignFragmentNesnesi.signButton(emailEditText.getText().toString(),passwordEditText.getText().toString())}"
+            android:text="@string/sing_in"
+            android:textAlignment="center"
+            android:textColor="@color/Lime"
+            android:textSize="@dimen/text_size_very_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextInput">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

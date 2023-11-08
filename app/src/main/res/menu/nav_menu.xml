@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile_mood"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/ic_contact_mail"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/star_rate"
+            android:icon="@drawable/ic_star_rate"
+            android:title="Star Rate" />
+
+        <item
+            android:id="@+id/share_app"
+            android:icon="@drawable/ic_share"
+            android:title="Share App" />
+    </group>
+
+    <item
+        android:id="@+id/lagout_app"
+        android:icon="@drawable/ic_logout"
+        android:title="Lagout Out" />
+
+</menu>

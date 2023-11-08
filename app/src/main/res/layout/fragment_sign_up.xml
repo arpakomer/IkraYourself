@@ -1,0 +1,143 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+            <variable
+                name="signUpFragmentNesnesi"
+                type="com.arpak.ikrayourself.ui.login.signup.SignupFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F6F7"
+        tools:context=".ui.login.signup.SignupFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_biggest"
+            android:layout_marginTop="@dimen/margin_incredible"
+            android:layout_marginEnd="@dimen/margin_biggest"
+            android:layout_marginBottom="@dimen/margin_very_small"
+            android:textColorHint="#008080"
+            app:boxStrokeColor="#092EFD"
+            app:boxStrokeWidth="@dimen/box_strike_width"
+            app:layout_constraintBottom_toTopOf="@+id/passwordInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_hint"
+                android:textColor="@color/Lime"
+                android:textColorHint="@color/Lime" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_biggest"
+            android:layout_marginTop="@dimen/margin_very_big"
+            android:layout_marginEnd="@dimen/margin_biggest"
+            android:layout_marginBottom="@dimen/margin_very_small"
+            android:textColorHint="#008080"
+            app:boxStrokeColor="@color/purple_500"
+            app:boxStrokeWidth="@dimen/box_strike_width"
+            app:layout_constraintBottom_toTopOf="@+id/confirmPasswordTextLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextInput"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:textColor="@color/Lime"
+                android:textColorHint="@color/Lime" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmPasswordTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_biggest"
+            android:layout_marginTop="@dimen/margin_very_big"
+            android:layout_marginEnd="@dimen/margin_biggest"
+            android:layout_marginBottom="@dimen/margin_very_small"
+            app:hintTextColor="#008080"
+            app:boxStrokeColor="@color/purple_500"
+            app:boxStrokeWidth="@dimen/box_strike_width"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNumberInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                android:textColor="@color/Lime"
+                android:textColorHint="@color/Lime"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneNumberInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_biggest"
+            android:layout_marginTop="@dimen/margin_very_big"
+            android:layout_marginEnd="@dimen/margin_biggest"
+            android:layout_marginBottom="@dimen/margin_very_big"
+            android:textColorHint="#008080"
+            app:boxStrokeColor="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTextLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number_hint"
+                android:textColor="@color/Lime"
+                android:textColorHint="@color/Lime" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_incredible"
+            android:backgroundTint="@color/black"
+            android:onClick="@{ () -> signUpFragmentNesnesi.signUpButton(emailEditText.getText().toString(),passwordEditText.getText().toString(),confirmPasswordEditText.getText().toString(),phoneNumberEditText.getText().toString())}"
+            android:text="@string/sign_up"
+            android:textColor="@color/Lime"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumberInputLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

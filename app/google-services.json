@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "767147591442",
+    "project_id": "ikrayourself",
+    "storage_bucket": "ikrayourself.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767147591442:android:ba799a35c4c5abd01495cb",
+        "android_client_info": {
+          "package_name": "com.arpak.ikrayourself"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHDJSG5wSj-qx-tITA0f8TvLSCsgDPd4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

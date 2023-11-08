@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password_hint">password</string>
+    <string name="sing_in">SING IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number_hint">"Phone Number "</string>
+    <string name="ikra_yourself">Ikra Yourself</string>
+</resources>
