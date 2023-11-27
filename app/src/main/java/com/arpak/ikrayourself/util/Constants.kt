@@ -10,6 +10,7 @@ object Constants {
     const val USERS = "users"
     const val PHONE_NUMBER = "phone number"
     const val USER_INFO = "UserInfo"
+    const val FULL_NAME = "full name"
 
     const val FAILURE = "Failure"
 }

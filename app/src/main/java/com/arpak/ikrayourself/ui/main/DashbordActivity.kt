@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -18,7 +17,7 @@ import com.arpak.ikrayourself.ui.main.bottomfragment.HomeFragment
 import com.arpak.ikrayourself.ui.main.bottomfragment.NoteFragment
 import com.arpak.ikrayourself.ui.main.bottomfragment.SettingFragment
 import com.arpak.ikrayourself.ui.main.navfragment.ContactFragment
-import com.arpak.ikrayourself.ui.main.navfragment.ProfileFragment
+import com.arpak.ikrayourself.ui.main.navfragment.profile.ProfileFragment
 import com.arpak.ikrayourself.ui.main.navfragment.StarRateFragment
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
 

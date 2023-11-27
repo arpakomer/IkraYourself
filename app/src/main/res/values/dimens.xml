@@ -5,7 +5,12 @@
     <dimen name="margin_incredible">150dp</dimen>
     <dimen name="margin_biggest">75dp</dimen>
     <dimen name="margin_very_big">32dp</dimen>
+    <dimen name="margin_very_middle">16dp</dimen>
+    <dimen name="margin_very_middle_small">8dp</dimen>
     <dimen name="margin_very_small">4dp</dimen>
+
+    <dimen name="material_card_corner">8dp</dimen>
+    <dimen name="material_card_elevation">6dp</dimen>
 
     <dimen name="text_size_biggest">36sp</dimen>
     <dimen name="text_size_very_big">24sp</dimen>
@@ -18,4 +23,9 @@
     <dimen name="button_height">58dp</dimen>
     <dimen name="button_width">150dp</dimen>
     <dimen name="box_strike_width">4dp</dimen>
+
+    <dimen name="view_divid_width">4dp</dimen>
+    <dimen name="view_divid_height">75dp</dimen>
+
+    <dimen name="profile_width_height">200dp</dimen>
 </resources>

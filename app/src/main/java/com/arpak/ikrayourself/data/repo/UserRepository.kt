@@ -4,17 +4,15 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.arpak.ikrayourself.data.model.UserModel
 import com.arpak.ikrayourself.util.Constants.FAILURE
+import com.arpak.ikrayourself.util.Constants.FULL_NAME
 import com.arpak.ikrayourself.util.Constants.PHONE_NUMBER
-import com.arpak.ikrayourself.util.Constants.SIGN_UP
 import com.arpak.ikrayourself.util.Constants.SIGN_IN
+import com.arpak.ikrayourself.util.Constants.SIGN_UP
 import com.arpak.ikrayourself.util.Constants.USERS
 import com.arpak.ikrayourself.util.Constants.USER_INFO
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-
-
-
 
 
 class UserRepository {
@@ -39,7 +37,7 @@ class UserRepository {
             } else {
 
                 isSignIn.value = false
-                Log.w(SIGN_IN, FAILURE,task.exception)
+                Log.w(SIGN_IN, FAILURE, task.exception)
             }
         }
 
@@ -77,24 +75,27 @@ class UserRepository {
         }
     }
 
-    fun getUserInfo() {
+
+    fun getWithUserInfo() {
+
         auth.currentUser?.let { user ->
 
             val documentRef = db.collection(USERS).document(user.uid)
             documentRef.get()
                 .addOnSuccessListener { document ->
-                    document?.let {
+                    document.let {
                         userInfo.value = UserModel(
                             user.email,
+                            document.get(FULL_NAME) as String,
                             document.get(PHONE_NUMBER) as String
                         )
                     }
                 }
-                .addOnFailureListener { exception ->
-                    Log.d(USER_INFO, FAILURE, exception)
+                .addOnFailureListener { ex ->
+                    Log.d(USER_INFO, FAILURE,ex)
                 }
-
         }
+
     }
 
     fun signOut() {
@@ -102,4 +103,8 @@ class UserRepository {
     }
 
 }
+
+
+
+
 

@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
 //        }
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
-        Firebase.auth.currentUser.let {
+        Firebase.auth.currentUser?.let {
             val intent = Intent(this, DashbordActivity::class.java)
             startActivity(intent)
             finish()
